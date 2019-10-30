@@ -1,0 +1,18 @@
+CREATE TABLE user(
+id SERIAL,
+name VARCHAR(100),
+contact_number INTEGER,
+PRIMARY KEY (family_id)
+);
+
+CREATE TABLE annonce(
+id SERIAL,
+title VARCHAR(100),
+id_user INTEGER,
+date DATE,
+localisation VARCHAR(100),
+prix INTEGER, 
+desciption VARCHAR(200),
+PRIMARY KEY (id),
+FOREIGN KEY (id_user) REFERENCES user(id)
+);
