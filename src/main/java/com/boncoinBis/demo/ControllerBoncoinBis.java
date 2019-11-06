@@ -24,18 +24,21 @@ public class ControllerBoncoinBis {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView showForm() {
-        return new ModelAndView("viewBoncoinBis", "annonce", new Annonce());
+        return new ModelAndView("formAnnonce", "annonce", new Annonce());
     }
  
     @RequestMapping(value = "/addAnnonce", method = RequestMethod.POST)
     public String submit(@Valid @ModelAttribute("annonce")Annonce annonce, 
       BindingResult result, ModelMap model) {
         if (result.hasErrors()) {
-            return "error";
+            return "formAnnonce";
         }
         model.addAttribute("title", annonce.getTitle());
-        model.addAttribute("prix", annonce.getPrix());
         model.addAttribute("id", annonce.getId());
-        return "annonce";
+        model.addAttribute("localisation", annonce.getLocalisation());
+        model.addAttribute("prix", annonce.getPrix());
+        model.addAttribute("desciption", annonce.getDesciption());
+        boncoinBisService.save(annonce);
+        return "affichageAnnonce";
     }
 }

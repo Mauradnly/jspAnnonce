@@ -16,6 +16,10 @@ public class ServiceBoncoinBis {
 		return boncoinBisRepository.findAll();
 	}
 	
+	public void save(Annonce annonce) {
+		boncoinBisRepository.save(annonce);
+	}
+	
 	public void insertPony(Annonce annonce) {
 		boncoinBisRepository.save(annonce);
 	}

@@ -2,7 +2,8 @@ CREATE TABLE user(
 id SERIAL,
 name VARCHAR(100),
 contact_number INTEGER,
-PRIMARY KEY (family_id)
+nb_annonces INTEGER,
+PRIMARY KEY (id)
 );
 
 CREATE TABLE annonce(
@@ -14,5 +15,4 @@ localisation VARCHAR(100),
 prix INTEGER, 
 desciption VARCHAR(200),
 PRIMARY KEY (id),
-FOREIGN KEY (id_user) REFERENCES user(id)
 );
