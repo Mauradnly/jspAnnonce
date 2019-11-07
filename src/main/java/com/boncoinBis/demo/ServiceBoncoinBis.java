@@ -12,7 +12,7 @@ public class ServiceBoncoinBis {
 	@Autowired
 	RepositoryBoncoinBis boncoinBisRepository;
 	
-	public List<Annonce> findAll() {
+	public List<Annonce> findAllAnnonce() {
 		return boncoinBisRepository.findAll();
 	}
 	

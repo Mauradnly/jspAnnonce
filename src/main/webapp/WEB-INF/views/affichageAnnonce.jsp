@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,29 +11,35 @@
 </head>
 <body>
 	<jsp:include page="header.jsp"/>
-	<div class="main">
-		<table>
-	        <tr>
-	            <td>Title :</td>
-	            <td>${title}</td>
-	        </tr>
-	        <tr>
-	            <td>ID :</td>
-	            <td>${id}</td>
-	        </tr>
-	        <tr>
-	            <td>Localisation :</td>
-	            <td>${localisation}</td>
-	        </tr>
-	        <tr>
-	            <td>Prix :</td>
-	            <td>${prix}</td>
-	        </tr>
-	        <tr>
-	            <td>Description :</td>
-	            <td>${desciption}</td>
-	        </tr>
-	    </table>
+	<div class="mainAffichage">
+	<c:forEach items="${annonces}" var="annonce" >
+		<div class="annonce">
+			<table>
+				<h3>${annonce.id}</h3>
+		        <tr>
+		            <td>Title :</td>
+		            <td><p>${annonce.title}</p></td>
+		        </tr>
+		        <tr>
+		            <td>Utilisateur :</td>
+		            <td><p>${annonce.idUser}</p></td>
+		        </tr>
+		        <tr>
+		            <td>Localisation :</td>
+		            <td><p>${annonce.localisation}</p></td>
+		        </tr>
+		        <tr>
+		            <td>Prix :</td>
+		            <td><p>${annonce.prix}</p></td>
+		        </tr>
+		        <tr>
+		            <td>Description :</td>
+		            <td><p>${annonce.desciption}</p></td>
+		        </tr>
+		    </table>  
+		</div> 
+	
+	</c:forEach>
 	</div>
 </body>
 </html>

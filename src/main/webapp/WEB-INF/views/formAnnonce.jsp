@@ -25,28 +25,23 @@
 	                </tr>
 	                <tr>
 	                    <td><form:label path="idUser">N°_utilisateur :</form:label></td>
-	                    <td><form:input path="idUser"/></td>
-	                    <form:errors path="idUser" />
+	                    <td><form:input path="idUser"/><form:errors path="idUser" /></td>
 	                </tr>
 	                <tr>
 	                    <td><form:label path="date">Date (jj-mm-yy):</form:label></td>
-	                    <td><form:input type="date" path="date"/></td>
-	                    <form:errors path="date" />
+	                    <td><form:input type="date" path="date"/><form:errors path="date" /></td>
 	                </tr>
 	                <tr>
 	                    <td><form:label path="localisation">Localisation :</form:label></td>
-	                    <td><form:input path="localisation"/></td>
-	                    <form:errors path="localisation" />
+	                    <td><form:input path="localisation"/><form:errors path="localisation" /></td>
 	                </tr>
 	                <tr>
 	                    <td><form:label path="prix">Prix :</form:label></td>
-	                    <td><form:input path="prix"/></td>
-	                    <form:errors path="prix" />
+	                    <td><form:input path="prix"/><form:errors path="prix" /></td>
 	                </tr>
 	                <tr>
 	                    <td><form:label path="desciption">Description :</form:label></td>
-	                    <td><form:input path="desciption"/></td>
-	                    <form:errors path="desciption" />
+	                    <td><form:input path="desciption"/><form:errors path="desciption" /></td>
 	                </tr>
 	                <tr>
 	                    <td><input type="submit" value="Submit"/></td>
